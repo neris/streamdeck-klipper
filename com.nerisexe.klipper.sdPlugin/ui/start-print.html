@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <title>Printer Status Settings</title>
+    <meta charset="utf-8" />
+    <script src="https://sdpi-components.dev/releases/v4/sdpi-components.js"></script>
+</head>
+
+<body>
+    <!--
+        Learn more about property inspector components at https://sdpi-components.dev/docs/components
+    -->
+    <sdpi-item label="Moonraker API URL">
+        <sdpi-textfield setting="moonrakerUrl" placeholder="http://192.168.1.3:7125/" required></sdpi-textfield>
+        <span>See your moonraker.conf for port the number.</span>
+    </sdpi-item>
+
+    <br/>
+    <sdpi-item label="Filename">
+        <sdpi-textfield setting="filename" placeholder="test_print.gcode"></sdpi-textfield>
+    </sdpi-item>
+
+    <br/>
+
+    <sdpi-item label="Icon style">
+        <sdpi-select setting="iconStyle">
+            <option value="voron">Voron</option>
+            <option value="vzbot">VzBoT</option>
+            <option value="klipper">Klipper</option>
+            <option value="mainsail">Mainsail</option>
+            <option value="fluidd">Fluidd</option>
+            <option value="solid">Solid Color</option>
+            <option value="blank">Blank</option>
+        </sdpi-select>
+    </sdpi-item>
+    <sdpi-item label="Icon color">
+        <sdpi-color setting="iconColor" default="#3d005b"></sdpi-color>
+    </sdpi-item>
+</body>
+
+</html>

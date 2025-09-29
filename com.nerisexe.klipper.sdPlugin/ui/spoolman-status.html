@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <title>Printer Status Settings</title>
+    <meta charset="utf-8" />
+    <script src="https://sdpi-components.dev/releases/v4/sdpi-components.js"></script>
+</head>
+
+<body>
+    <!--
+        Learn more about property inspector components at https://sdpi-components.dev/docs/components
+    -->
+    <sdpi-item label="Moonraker API URL">
+        <sdpi-textfield setting="moonrakerUrl" placeholder="http://192.168.1.3:7125/" required></sdpi-textfield>
+        <span>See your moonraker.conf for port the number.</span>
+        <span>Spoolman integration must be configured on your printer.</span>
+    </sdpi-item>
+    <sdpi-item label="Update interval (seconds)">
+        <sdpi-range setting="updateInterval" min="0" max="600" step="10" default="60" showlabels></sdpi-range>
+        <span>Set to 0 to disable auto update.</span>
+    </sdpi-item>
+
+    <br/>
+
+    <sdpi-item label="When the key pressed">
+        <sdpi-select setting="keyAction">
+            <option value="update">Update information</option>
+            <option value="openUrl">Open URL</option>
+            <option value="gcode">Execute GCODE</option>
+        </sdpi-select>
+    </sdpi-item>
+    <sdpi-item label="URL to open">
+        <sdpi-textfield setting="keyActionUrl" placeholder="http://192.168.1.3/"></sdpi-textfield>
+    </sdpi-item>
+    <sdpi-item label="GCODE">
+        <sdpi-textfield setting="gcode" placeholder="M117 Test message"></sdpi-textfield>
+    </sdpi-item>
+</body>
+
+</html>

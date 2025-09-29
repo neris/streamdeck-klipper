@@ -1,0 +1,166 @@
+{
+	"Name": "Klipper",
+	"Version": "1.0.0.0",
+	"Author": "NERIS.EXE",
+	"Actions": [
+		{
+			"Name": "Printer status",
+			"UUID": "com.nerisexe.klipper.printer-status",
+			"Icon": "imgs/actions/printer-status/icon",
+			"Tooltip": "Displays current printer status.",
+			"PropertyInspectorPath": "ui/printer-status.html",
+			"Controllers": [
+				"Keypad"
+			],
+			"States": [
+				{
+					"Image": "imgs/actions/default",
+					"TitleAlignment": "top"
+				}
+			]
+		},
+		{
+			"Name": "Spoolman status",
+			"UUID": "com.nerisexe.klipper.spoolman-status",
+			"Icon": "imgs/actions/spoolman-status/icon",
+			"Tooltip": "Displays the status of your currently selected spool. Requires Spoolman integration.",
+			"PropertyInspectorPath": "ui/spoolman-status.html",
+			"Controllers": [
+				"Keypad"
+			],
+			"States": [
+				{
+					"Image": "imgs/actions/default",
+					"TitleAlignment": "top"
+				}
+			]
+		},
+		{
+			"Name": "Run GCODE",
+			"UUID": "com.nerisexe.klipper.run-gcode",
+			"Icon": "imgs/actions/run-gcode/icon",
+			"Tooltip": "Runs configured GCODE on your printer.",
+			"PropertyInspectorPath": "ui/run-gcode.html",
+			"Controllers": [
+				"Keypad"
+			],
+			"States": [
+				{
+					"Image": "imgs/actions/default",
+					"TitleAlignment": "middle"
+				}
+			]
+		},
+		{
+			"Name": "Start print",
+			"UUID": "com.nerisexe.klipper.start-print",
+			"Icon": "imgs/actions/start-print/icon",
+			"Tooltip": "Starts printing the specified file.",
+			"PropertyInspectorPath": "ui/start-print.html",
+			"Controllers": [
+				"Keypad"
+			],
+			"States": [
+				{
+					"Image": "imgs/actions/default",
+					"TitleAlignment": "middle"
+				}
+			]
+		},
+		{
+			"Name": "Pause print",
+			"UUID": "com.nerisexe.klipper.pause-print",
+			"Icon": "imgs/actions/pause-print/icon",
+			"Tooltip": "Pauses printing.",
+			"PropertyInspectorPath": "ui/pause-print.html",
+			"Controllers": [
+				"Keypad"
+			],
+			"States": [
+				{
+					"Image": "imgs/actions/default",
+					"TitleAlignment": "middle"
+				}
+			]
+		},
+		{
+			"Name": "Resume print",
+			"UUID": "com.nerisexe.klipper.resume-print",
+			"Icon": "imgs/actions/resume-print/icon",
+			"Tooltip": "Resumes printing.",
+			"PropertyInspectorPath": "ui/resume-print.html",
+			"Controllers": [
+				"Keypad"
+			],
+			"States": [
+				{
+					"Image": "imgs/actions/default",
+					"TitleAlignment": "middle"
+				}
+			]
+		},
+		{
+			"Name": "Cancel print",
+			"UUID": "com.nerisexe.klipper.cancel-print",
+			"Icon": "imgs/actions/cancel-print/icon",
+			"Tooltip": "Cancels the print.",
+			"PropertyInspectorPath": "ui/cancel-print.html",
+			"Controllers": [
+				"Keypad"
+			],
+			"States": [
+				{
+					"Image": "imgs/actions/default",
+					"TitleAlignment": "middle"
+				}
+			]
+		},
+		{
+			"Name": "Speed factor",
+			"UUID": "com.nerisexe.klipper.speed-factor",
+			"Icon": "imgs/actions/speed-factor/icon",
+			"Tooltip": "Control the printer's speed factor.",
+			"PropertyInspectorPath": "ui/speed-factor.html",
+			"Controllers": [
+				"Encoder"
+			],
+			"Encoder": {
+				"layout": "$A1",
+				"TriggerDescription": {
+					"Rotate": "Adjust value",
+					"Push": "Reset to default",
+					"Touch": "Request update"
+				}
+			},
+			"States": [
+				{
+					"Image": "imgs/actions/default"
+				}
+			]
+		}
+	],
+	"Category": "Klipper",
+	"CategoryIcon": "imgs/plugin/category-icon",
+	"CodePath": "bin/plugin.js",
+	"Description": "Klipper (Moonraker) integration for Stream Deck.",
+	"Icon": "imgs/plugin/marketplace",
+	"SDKVersion": 2,
+	"Software": {
+		"MinimumVersion": "6.5"
+	},
+	"OS": [
+		{
+			"Platform": "mac",
+			"MinimumVersion": "12"
+		},
+		{
+			"Platform": "windows",
+			"MinimumVersion": "10"
+		}
+	],
+	"Nodejs": {
+		"Version": "20",
+		"Debug": "enabled"
+	},
+	"UUID": "com.nerisexe.klipper"
+}
