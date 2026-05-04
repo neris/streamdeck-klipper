@@ -1,4 +1,5 @@
-import streamDeck, {  DialAction, DidReceiveSettingsEvent, JsonObject, KeyAction, SingletonAction, WillAppearEvent } from "@elgato/streamdeck";
+import streamDeck, { DialAction, DidReceiveSettingsEvent, KeyAction, SingletonAction, WillAppearEvent } from "@elgato/streamdeck";
+import type { JsonObject } from "@elgato/utils";
 import IconTemplate, { IconTemplateOptions } from "../icons/IconTemplate";
 
 export abstract class BaseAction<T extends BaseActionSettings> extends SingletonAction<T> {

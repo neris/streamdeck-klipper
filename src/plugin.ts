@@ -1,4 +1,4 @@
-import streamDeck, { LogLevel } from "@elgato/streamdeck";
+import streamDeck from "@elgato/streamdeck";
 
 import { PrinterStatus } from "./actions/PrinterStatus";
 import { SpoolmanStatus } from "./actions/SpoolmanStatus";
@@ -10,7 +10,7 @@ import { CancelPrint } from "./actions/CancelPrint";
 import { SpeedFactor } from "./actions/SpeedFactor";
 
 // We can enable "trace" logging so that all messages between the Stream Deck, and the plugin are recorded. When storing sensitive information
-streamDeck.logger.setLevel(LogLevel.TRACE);
+streamDeck.logger.setLevel("trace");
 
 // Register actions
 streamDeck.actions.registerAction(new PrinterStatus());
