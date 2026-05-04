@@ -107,11 +107,11 @@ export default function IconTemplate(options: IconTemplateOptions) {
 
 
         ${options.progress !== undefined && (`
-            <text x="72" y="54" text-anchor="middle" font-size="28" font-weight="bold" fill="white" stroke="black" stroke-width="3px">${options.state ?? ''}</text>
-            <text x="72" y="84" text-anchor="middle" font-size="32" font-weight="bold" fill="white" stroke="black" stroke-width="2px"> ${options.progress.toFixed(0)}%</text>
+            <text x="72" y="54" text-anchor="middle" font-size="28" font-weight="bold" fill="white" stroke="black" stroke-width="1px">${options.state ?? ''}</text>
+			<text x="72" y="84" text-anchor="middle" font-size="32" font-weight="bold" fill="white" stroke="black" stroke-width="1px"> ${options.progress.toFixed(0)}%</text>
         `)}
         ${options.progress === undefined && (`
-            <text x="72" y="80" text-anchor="middle" font-size="28" font-weight="bold" fill="white" stroke="black" stroke-width="3px">${options.state ?? ''}</text>
+            <text x="72" y="80" text-anchor="middle" font-size="28" font-weight="bold" fill="white" stroke="black" stroke-width="1px">${options.state ?? ''}</text>
         `)}
 
         <text x="2" y="116" font-size="20" fill="white">${options.detailsLine1 ?? ''}</text>
